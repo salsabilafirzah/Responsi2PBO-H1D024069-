@@ -1,0 +1,33 @@
+Setelah anda menyelesaikan kode, tolong jawab pertanyaan dibawah ini ya =
+
+
+1. Apa tujuan utama adanya interface dalam pemrograman berorientasi objek, dan bagaimana interface membantu menciptakan kontrak perilaku?
+2. Mengapa interface dapat memiliki banyak implementasi, dan apa makna konseptual dari kemampuan tersebut dalam desain sistem?
+3. Apa perbedaan mendasar antara extends dan implements dalam konteks interface, jika dilihat secara konsep tanpa melihat contoh kode?
+4. Apa alasan diperkenalkannya default method dalam interface, dan bagaimana fitur ini memengaruhi keberlangsungan (compatibility) suatu sistem yang sudah berjalan?
+5. Bagaimana konsep multiple interface memperluas fleksibilitas desain tanpa menimbulkan masalah kompleksitas yang biasa muncul pada multiple inheritance?
+
+JAWABAN:
+
+1. Tujuan utama interface adalah untuk menentukan kontrak perilaku yang wajib dimiliki oleh class
+   yang mengimplementasikannya. Interface tidak peduli bagaimana cara sebuah class menjalankan fungsi
+   tersebut, yang penting method-nya ada dan bisa digunakan. Dengan begitu, interface membantu menyatukan
+   standar perilaku di berbagai class yang berbeda, sehingga sistem lebih konsisten dan mudah dikembangkan.
+
+2. Interface bisa memiliki banyak implementasi karena setiap class boleh memberikan versi perilakunya
+   masing-masing. Secara konsep, ini menunjukkan bahwa beberapa objek berbeda bisa melakukan hal yang sama,
+   tetapi dengan cara yang berbeda. Ini membuat desain sistem lebih fleksibel dan memungkinkan perubahan
+   atau penambahan jenis objek baru tanpa mengubah struktur yang sudah ada.
+
+3. extends → saya adalah versi turunan dari yang di atas
+   implements → saya memiliki kemampuan/perilaku yang ditentukan oleh interface tersebut
+
+4. Default method diperkenalkan supaya interface bisa menambahkan fitur baru tanpa merusak class
+   lama yang sudah mengimplementasikannya. Jadi sistem tetap compatible dan tidak menimbulkan error
+   meskipun interface berkembang. Default method memberikan implementasi dasar yang bisa langsung
+   digunakan, dan class baru bisa memilih untuk override jika ingin perilaku berbeda.
+
+5. Multiple interface memberi keleluasaan sebuah class untuk memiliki berbagai kemampuan sekaligus,
+   tanpa mewarisi banyak hal teknis seperti pada multiple inheritance yang sering menimbulkan konflik
+   (misal: diamond problem). Interface hanya memberi kontrak method, bukan pewarisan atribut/implementasi,
+   sehingga desain tetap fleksibel tanpa menciptakan kerumitan struktural.

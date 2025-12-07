@@ -1,0 +1,33 @@
+Pertanyaan Refleksi
+Setelah menyelesaikan kode, jawab pertanyaan berikut:
+
+1. Apa itu abstract class dan Kenapa kita membutuhkan Abstarct class?
+2. Apa perbedaan utama antara abstract class dan class biasa dalam pemrograman berorientasi objek? 
+3. Mengapa subclass wajib mengimplementasikan semua abstract method dari parent class?
+4. Mengapa abstract method tidak boleh memiliki isi implementasi di dalam abstract class?
+5. Bagaimana abstract class dapat mendukung konsep polimorfisme, dan mengapa objek yang direferensikan melalui tipe abstract class tetap dapat menjalankan perilaku berbeda pada masing-masing subclass?
+
+JAWABAN:
+
+1. Abstract class adalah class yang tidak bisa dibuat objek langsung dan biasanya menjadi kerangka
+   dasar untuk class turunan. Kita butuh abstract class ketika ada sifat umum yang dimiliki semua
+   subclass, tapi detail perilakunya pasti berbeda di masing-masing subclass. Jadi abstract class
+   membantu menyatukan konsep dasarnya, sementara detail spesifik dikerjakan oleh subclass.
+
+2. Abstract class bisa punya abstract method (tanpa isi), dan tidak boleh di-instansiasi langsung.
+   Class biasa semua method-nya punya implementasi dan boleh langsung dibuat objek.
+
+3. Karena abstract method hanya mendefinisikan apa yang harus dilakukan, tanpa menjelaskan
+   bagaimana caranya. Subclass yang sifatnya lebih spesifik harus memberikan implementasi yang
+   sesuai dengan perilakunya sendiri. Jika tidak diimplementasikan, subclass itu sendiri otomatis
+   harus menjadi abstract class
+
+4. Karena abstract method hanya berperan sebagai kontrak atau aturan yang harus dipenuhi oleh
+   subclass. Kalau sudah punya isi, artinya dia tidak abstract lagi. Tujuannya memang membiarkan
+   subclass bebas menentukan cara kerja method tersebut sesuai kebutuhan masing-masing.
+
+5. Abstract class dapat menampung referensi ke objek dari semua subclass-nya. Saat method
+   dipanggil lewat referensi abstract class, Java akan menjalankan method sesuai tipe objek
+   sebenarnya, bukan tipe referensinya.
+   Akibatnya, walaupun kelihatannya sama-sama AbstractMesin, setiap objek bisa menunjukkan
+   perilaku berbeda tergantung subclass mana yang dipakai, itulah polimorfisme.
